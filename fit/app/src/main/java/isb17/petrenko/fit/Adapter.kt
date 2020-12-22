@@ -39,4 +39,9 @@ class Adapter(listArray: ArrayList<ListItem>, context: Context): RecyclerView.Ad
         var listItem=listArrayR.get(position)
         holder.bind(listItem, contextR)
     }
+    fun  updateAdapter(listArray:List<ListItem>){
+        listArrayR.clear()
+        listArrayR.addAll(listArray)
+        notifyDataSetChanged()
+    }
 }

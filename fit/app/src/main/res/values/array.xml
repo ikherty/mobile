@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exec">
+        <item>Плечи</item>
+        <item>Руки</item>
+        <item>Грудь</item>
+        <item>Спина</item>
+        <item>Ноги</item>
+    </string-array>
+<!--<string-array name="exec_im">-->
+<!--    <item>Плечи</item>-->
+<!--    <item>Руки</item>-->
+<!--    <item>Грудь</item>-->
+<!--    <item>Спина</item>-->
+<!--    <item>Ноги</item>-->
+<!--</string-array>-->
+<array name="exec_image">
+   <item>@drawable/ic_exec</item>
+    <item>@drawable/ic_exec</item>
+    <item>@drawable/ic_exec</item>
+    <item>@drawable/ic_exec</item>
+    <item>@drawable/ic_exec</item>
+
+</array>
+        <string-array name="cook">
+        <item>творог</item>
+        <item>банан</item>
+        <item>рыба</item>
+        <item>греча</item>
+    </string-array>
+<array name="cook_image">
+   <item>@drawable/ic_cook</item>
+    <item>@drawable/ic_cook</item>
+    <item>@drawable/ic_cook</item>
+    <item>@drawable/ic_cook</item>
+</array>
+</resources>
