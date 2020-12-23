@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.cook),
                     getImageId(R.array.cook_image)
                 )
-            )//добавление списка не нужно
+            )
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
