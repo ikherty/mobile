@@ -1,6 +1,7 @@
 package isb17.petrenko.fit
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +22,8 @@ class Adapter(listArray: ArrayList<ListItem>, context: Context): RecyclerView.Ad
             im.setImageResource(listItem.image_id)
             itemView.setOnClickListener(){
                 Toast.makeText(context,"pressed ${tvTitle.text}", Toast.LENGTH_SHORT).show()
+                val i=Intent(context, content_activity::class.java).apply{}
+                context.startActivity(i)
             }
         }
 

@@ -36,15 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         return true
     }
-//        var nameList=ArrayList<String>()
-//        nameList.add("https://dev.px4.io/v1.9.0/en/ros/offboard_control.html")
-//        nameList.add("https://dev.px4.io/v1.9.0/en/ros/offboard_control.html")
-//        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,nameList)
-//        listView.adapter=adapter
-//        listView.setOnItemClickListener{parent, view, position, id ->
-//            //run actions after click
-//            Toast.makeText(this,"Pressed item ${nameList.get(position)}", Toast.LENGTH_SHORT).show()
-//        }
+
     fun fillArrays(titleArray: Array<String>, imageArray: IntArray):List<ListItem>{
         var listItemArray=ArrayList<ListItem>()
         for(n in 0..titleArray.size-1){
