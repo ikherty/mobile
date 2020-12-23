@@ -19,13 +19,15 @@ class Adapter(listArray: ArrayList<ListItem>, context: Context) :
         val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
         val im = view.findViewById<ImageView>(R.id.im)
 
-        fun bind(listItem: ListItem, context: Context) {
+        fun bind(listItem: ListItem, context: Context, position: Int) {
             tvTitle.text = listItem.title_text
             im.setImageResource(listItem.image_id)
-            //impotant
-            itemView.setOnClickListener() {
-                Toast.makeText(context, "pressed ${tvTitle.text}", Toast.LENGTH_SHORT).show()
-                val i = Intent(context, content_activity::class.java).apply {}
+            itemView.setOnClickListener {
+                val i = Intent(context, content_activity::class.java).apply {
+//                    putExtra("title", tvTitle.text.toString())
+//                    putExtra("image", listItem.image_id)
+                    putExtra("pos", position)
+                }
                 context.startActivity(i)
             }
         }
@@ -42,7 +44,7 @@ class Adapter(listArray: ArrayList<ListItem>, context: Context) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var listItem = listArrayR.get(position)
-        holder.bind(listItem, contextR)
+        holder.bind(listItem, contextR, position)
     }
 
     fun updateAdapter(listArray: List<ListItem>) {
