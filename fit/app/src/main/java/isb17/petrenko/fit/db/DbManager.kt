@@ -7,11 +7,11 @@ import android.icu.text.CaseMap
 
 //https://developer.android.com/training/data-storage/sqlite#kotlin
 class DbManager(val context: Context) {
-    val DbHelper = DbHelper(context)
+    val dbHelper = DbHelper(context)
     var db: SQLiteDatabase? = null
 
     fun openDb() {
-        db = DbHelper.writableDatabase
+        db = dbHelper.writableDatabase
     }
 
     fun insertToDb(title: String, content: String) {
@@ -32,6 +32,11 @@ class DbManager(val context: Context) {
                 dataList.add(dataText.toString())
             }
         }
+        cursor.close()
         return dataList
+    }
+
+    fun closeDb() {
+        dbHelper.close()
     }
 }

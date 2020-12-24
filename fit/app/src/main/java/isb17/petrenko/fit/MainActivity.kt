@@ -43,6 +43,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     getImageId(R.array.cook_image)
                 )
             )
+            R.id.id_table -> adapter?.updateAdapter(
+                //перейти на активити
+            )
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
