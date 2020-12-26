@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class Adapter(listArray: ArrayList<ListItem>, context: Context) :
@@ -23,7 +22,7 @@ class Adapter(listArray: ArrayList<ListItem>, context: Context) :
             tvTitle.text = listItem.title_text
             im.setImageResource(listItem.image_id)
             itemView.setOnClickListener {
-                val i = Intent(context, content_activity::class.java).apply {
+                val i = Intent(context, ContentActivity::class.java).apply {
 //                    putExtra("title", tvTitle.text.toString())
 //                    putExtra("image", listItem.image_id)
                     putExtra("pos", position)

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".TableActivity">
 
     <EditText
         android:id="@+id/idTitle"
@@ -14,8 +15,8 @@
         android:layout_marginEnd="16dp"
         android:background="@android:drawable/editbox_background"
         android:ems="10"
+        android:hint="@string/hintTitle"
         android:inputType="textPersonName"
-        android:text="Заголовок"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +33,8 @@
         android:background="@android:drawable/editbox_background"
         android:ems="10"
         android:gravity="clip_horizontal"
+        android:hint="@string/hintFill"
         android:inputType="textMultiLine|textPersonName"
-        android:text="Содержание"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -47,8 +48,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:onClick="onClickSave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_save" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

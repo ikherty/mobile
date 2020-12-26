@@ -45,17 +45,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 )
             )
             R.id.id_table -> {
-            val intent = Intent(this, note_activity::class.java)
-            startActivity(intent)
-            //onStop() // this method is called automatically, it is no necessary call it manually
-        }
-//        }
-//        switch(item.itemId) {
-//            case R . id . id_table :{
-//                val noteIntent = Intent(this, note_activity::class.java)
-//                startActivity(noteIntent)
-//                //break
-//            }
+                val intent = Intent(this, NoteActivity::class.java)
+                startActivity(intent)
+            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

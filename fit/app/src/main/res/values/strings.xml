@@ -3,4 +3,7 @@
     <string name="exercise">Упражнения</string>
     <string name="timetable">Расписание</string>
     <string name="cook">Приемы пищи</string>
+    <string name="hintTitle">Заголовок</string>
+    <string name="hintFill">Содержание</string>
+    <string name="status">Нет заметок</string>
 </resources>
