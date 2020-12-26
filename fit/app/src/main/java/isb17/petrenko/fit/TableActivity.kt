@@ -22,8 +22,10 @@ class TableActivity : AppCompatActivity() {
     fun onClickSave(view: View) {
         val myTitle=idTitle.text.toString()
         val myFill=idFill.text.toString()
-        if (myTitle!=""&&myFill!="")
-            dbManager.insertToDb(idTitle.text.toString(), idTitle.text.toString())
+        if (myTitle!=""&&myFill!="") {
+            dbManager.insertToDb(myTitle, myFill)
+            finish()
+        }
     }
     fun getMyIntent(){
         val i=intent

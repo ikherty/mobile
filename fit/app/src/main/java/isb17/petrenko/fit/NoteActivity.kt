@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import isb17.petrenko.fit.db.DbManager
-import kotlinx.android.synthetic.main.main_content.*
+import kotlinx.android.synthetic.main.activity_note.*
 
 class NoteActivity : AppCompatActivity() {
     val dbManager = DbManager(this)
@@ -34,10 +34,17 @@ class NoteActivity : AppCompatActivity() {
     }
 
     fun init() {
-        rcView.layoutManager=LinearLayoutManager(this)
-        rcView.adapter=dbAdapter
+        rcNoteView.layoutManager=LinearLayoutManager(this)
+        rcNoteView.adapter=dbAdapter
     }
     fun fillAdapter(){
-        dbAdapter.updateAdapter(dbManager.readDbData())
+        val list=dbManager.readDbData()
+        dbAdapter.updateAdapter(list)
+        if(list.size>0) {
+            tvNoElement.visibility = View.GONE
+        } else
+        {
+            tvNoElement.visibility = View.VISIBLE
+        }
     }
 }

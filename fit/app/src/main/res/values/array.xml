@@ -19,10 +19,10 @@
         <item>@drawable/ic_exec</item>
     </array>
     <string-array name="cook">
-        <item>творог</item>
-        <item>банан</item>
-        <item>рыба</item>
-        <item>греча</item>
+        <item>Завтрак</item><!--https://grandkulinar.ru/9535-luchshie-recepty-dlya-zdorovogo-zavtraka.html-->
+        <item>Обед</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-obedy/-->
+        <item>Полдник</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-perekusy/-->
+        <item>Ужин</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-uzhiny/-->
     </string-array>
     <array name="cook_image">
         <item>@drawable/ic_cook</item>

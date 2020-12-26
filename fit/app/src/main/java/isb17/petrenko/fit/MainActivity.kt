@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 getImageId(R.array.exec_image)
             )
         )
-        rcView.hasFixedSize()
-        rcView.layoutManager = LinearLayoutManager(this)
+        rcNoteView.hasFixedSize()
+        rcNoteView.layoutManager = LinearLayoutManager(this)
         adapter = Adapter(list, this)
-        rcView.adapter = adapter
+        rcNoteView.adapter = adapter
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

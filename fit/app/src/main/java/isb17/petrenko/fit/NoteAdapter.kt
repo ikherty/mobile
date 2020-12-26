@@ -9,12 +9,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
+
     RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
     var listArray = listMain
     var context = contextM
+
     class NoteHolder(itemView: View, contextV: Context) : RecyclerView.ViewHolder(itemView) {
+
         val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
         var context = contextV
+
         fun setData(item: noteItem) {
             tvTitle.text = item.title
             itemView.setOnClickListener{
@@ -26,9 +30,6 @@ class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
             }
         }
     }
-
-    var adapter: NoteAdapter? = null
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteHolder {
         var inflater = LayoutInflater.from(parent.context)

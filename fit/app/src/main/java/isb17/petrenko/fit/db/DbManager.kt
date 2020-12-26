@@ -26,19 +26,16 @@ class DbManager(val context: Context) {
     fun readDbData(): ArrayList<noteItem> {
         val dataList = ArrayList<noteItem>()
         val cursor = db?.query(MyDbNameClass.TABLE_NAME, null, null, null, null, null, null)
-        with(cursor) {
-            while (this?.moveToNext()!!) {
-                val dataTitle =
-                    cursor?.getString(cursor.getColumnIndex(MyDbNameClass.COLUMN_NAME_TITLE))
-                val dataContent =
-                    cursor?.getString(cursor.getColumnIndex(MyDbNameClass.COLUMN_NAME_CONTENT))
+            while (cursor?.moveToNext()!!) {
+                val dataTitle = cursor.getString(cursor.getColumnIndex(MyDbNameClass.COLUMN_NAME_TITLE))
+                val dataContent = cursor.getString(cursor.getColumnIndex(MyDbNameClass.COLUMN_NAME_CONTENT))
                 val item = noteItem()
-                item.title = dataTitle.toString()
-                item.fill = dataContent.toString()
+                item.title = dataTitle
+                item.fill = dataContent
                 dataList.add(item)
             }
-        }
-        cursor?.close()
+
+        cursor.close()
         return dataList
     }
 
