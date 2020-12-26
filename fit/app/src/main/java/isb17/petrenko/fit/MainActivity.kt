@@ -1,5 +1,6 @@
 package isb17.petrenko.fit
 
+import android.content.Intent
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -43,9 +44,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     getImageId(R.array.cook_image)
                 )
             )
-            R.id.id_table -> adapter?.updateAdapter(
-                //перейти на активити
-            )
+            R.id.id_table -> {
+            val intent = Intent(this, note_activity::class.java)
+            startActivity(intent)
+            //onStop() // this method is called automatically, it is no necessary call it manually
+        }
+//        }
+//        switch(item.itemId) {
+//            case R . id . id_table :{
+//                val noteIntent = Intent(this, note_activity::class.java)
+//                startActivity(noteIntent)
+//                //break
+//            }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
