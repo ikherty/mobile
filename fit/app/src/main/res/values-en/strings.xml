@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">fit</string>
+    <string name="exercise">Exercises</string>
+    <string name="timetable">Time table</string>
+    <string name="cook">Meals</string>
+    <string name="hintTitle">Title</string>
+    <string name="hintFill">Content</string>
+    <string name="status">No notes</string>
+    <string name="zametki">Notes</string>
+    <string name="appTitle">Athletes diary</string>
+    <string name="zavtrak">Breakfast</string>
+    <string name="obed">Lunch</string>
+    <string name="ugin">Dinner</string>
+    <string name="poldnik">Afternoon snack</string>
+    <string name="razminka">Warm up</string>
+    <string name="plechi">Shoulders</string>
+    <string name="ruci">Hands</string>
+    <string name="grud">Chest</string>
+    <string name="spina">Back</string>
+    <string name="nogi">Legs</string>
+    <string name="pres">Press</string>
+</resources>

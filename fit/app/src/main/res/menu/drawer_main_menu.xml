@@ -8,7 +8,7 @@
             android:icon="@drawable/ic_exec"
             android:title="@string/exercise" />
     </group>
-    <item android:title="Заметки">
+    <item android:title="@string/zametki">
         <menu>
             <item
                 android:id="@+id/id_table"

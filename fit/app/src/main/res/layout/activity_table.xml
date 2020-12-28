@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
     tools:context=".TableActivity">
 
     <EditText
@@ -13,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@android:drawable/editbox_background"
+        android:background="@color/pink"
         android:ems="10"
         android:hint="@string/hintTitle"
         android:inputType="textPersonName"
@@ -30,7 +31,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@android:drawable/editbox_background"
+        android:background="@color/pink"
         android:ems="10"
         android:gravity="clip_horizontal"
         android:hint="@string/hintFill"
@@ -49,6 +50,7 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:onClick="onClickSave"
+        app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_save" />

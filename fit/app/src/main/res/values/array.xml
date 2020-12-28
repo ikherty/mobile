@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="exec">
-        <item>Разминка</item><!--00 https://fitseven.ru/myschtsy/atlas-uprajneyniy/kak-pravilno-delat-razminku-->
-        <item>Плечи</item><!--01 https://fitseven.ru/myschtsy/atlas-uprajneyniy/programma-trenirovok-dlya-pletch-->
-        <item>Руки</item><!--02 https://fitseven.ru/atlas-uprajneyniy/kak-ukrepit-ruki-->
-        <item>Грудь</item><!--03 https://fitseven.ru/atlas-uprajneyniy/kachaem-grud-gantelyami-->
-        <item>Спина</item><!--04 https://fitseven.ru/atlas-uprajneyniy/uprajneniya-na-spinu-->
-        <item>Ноги</item><!--05 https://fitseven.ru/myschtsy/atlas-uprajneyniy/kak-nakachat-myshtsy-nog-->
-        <item>Пресс</item><!--06 https://fitseven.ru/atlas-uprajneyniy/skruchivaniya-na-press-->
+        <item>@string/razminka</item><!--00 https://fitseven.ru/myschtsy/atlas-uprajneyniy/kak-pravilno-delat-razminku-->
+        <item>@string/plechi</item><!--01 https://fitseven.ru/myschtsy/atlas-uprajneyniy/programma-trenirovok-dlya-pletch-->
+        <item>@string/ruci</item><!--02 https://fitseven.ru/atlas-uprajneyniy/kak-ukrepit-ruki-->
+        <item>@string/grud</item><!--03 https://fitseven.ru/atlas-uprajneyniy/kachaem-grud-gantelyami-->
+        <item>@string/spina</item><!--04 https://fitseven.ru/atlas-uprajneyniy/uprajneniya-na-spinu-->
+        <item>@string/nogi</item><!--05 https://fitseven.ru/myschtsy/atlas-uprajneyniy/kak-nakachat-myshtsy-nog-->
+        <item>@string/pres</item><!--06 https://fitseven.ru/atlas-uprajneyniy/skruchivaniya-na-press-->
     </string-array>
     <array name="exec_image">
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
-        <item>@drawable/ic_exec</item>
+        <item>@drawable/ic_razm</item>
+        <item>@drawable/ic_plech</item>
+        <item>@drawable/ic_ruci</item>
+        <item>@drawable/ic_grud</item>
+        <item>@drawable/ic_spin</item>
+        <item>@drawable/ic_nogi</item>
+        <item>@drawable/ic_pres</item>
     </array>
     <string-array name="cook">
-        <item>Завтрак</item><!--https://grandkulinar.ru/9535-luchshie-recepty-dlya-zdorovogo-zavtraka.html-->
-        <item>Обед</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-obedy/-->
-        <item>Полдник</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-perekusy/-->
-        <item>Ужин</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-uzhiny/-->
+        <item>@string/zavtrak</item><!--https://grandkulinar.ru/9535-luchshie-recepty-dlya-zdorovogo-zavtraka.html-->
+        <item>@string/obed</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-obedy/-->
+        <item>@string/poldnik</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-perekusy/-->
+        <item>@string/ugin</item><!--https://grandkulinar.ru/recepies/zdorovoe-pitanie/poleznye-uzhiny/-->
     </string-array>
     <array name="cook_image">
-        <item>@drawable/ic_cook</item>
-        <item>@drawable/ic_cook</item>
-        <item>@drawable/ic_cook</item>
-        <item>@drawable/ic_cook</item>
+        <item>@drawable/ic_zavtr</item>
+        <item>@drawable/ic_obed</item>
+        <item>@drawable/ic_poldn</item>
+        <item>@drawable/ic_ugin</item>
     </array>
 </resources>
