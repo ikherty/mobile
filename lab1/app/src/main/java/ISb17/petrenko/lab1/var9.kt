@@ -9,16 +9,13 @@ object var9 {
         return array
     }
 
-    fun customArray(array: Array<Int>): Array<Int> {
-        var newArray = emptyArray<Int>()
-        //val newArray = Array<Int>(n) { 0 }
-        var j = 0
+    fun customArray(array: Array<Int>): IntArray {
+        val newArray = mutableSetOf<Int>()
         for (i in array.indices) {
             if (array[i] == 0) {
-                newArray += i
-                j++
+                newArray.add(i)
             }
         }
-        return newArray
+        return newArray.toIntArray()
     }
 }

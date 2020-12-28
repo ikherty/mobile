@@ -9,17 +9,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var RandomArray = var9.randomArray(10)
-        var inputString: String = ""
-        for (c in RandomArray)
-            inputString += (c.toString() + " ")
+        val RandomArray = var9.randomArray(10)
+        val inputString = RandomArray.joinToString()
         inputField.setText(inputString)
 
         button.setOnClickListener {
-            var customArray = var9.customArray(RandomArray)
-            var customString: String = ""
-            for (c in customArray)
-                customString += (c.toString() + " ")
+            val customArray = var9.customArray(RandomArray)
+            val customString = customArray.joinToString()
             outputField.setText(customString)
         }
     }
