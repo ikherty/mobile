@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import isb17.petrenko.fit.db.DbManager
 
 class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
 
@@ -21,10 +22,10 @@ class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
 
         fun setData(item: noteItem) {
             tvTitle.text = item.title
-            itemView.setOnClickListener{
-                val intent=Intent(context, TableActivity::class.java).apply {
-                    putExtra(MyIntentConstant.I_TITLE_KEY,item.title)
-                    putExtra(MyIntentConstant.I_CONTENT_KEY,item.fill)
+            itemView.setOnClickListener {
+                val intent = Intent(context, TableActivity::class.java).apply {
+                    putExtra(MyIntentConstant.I_TITLE_KEY, item.title)
+                    putExtra(MyIntentConstant.I_CONTENT_KEY, item.fill)
                 }
                 context.startActivity(intent)
             }
@@ -33,7 +34,7 @@ class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteHolder {
         var inflater = LayoutInflater.from(parent.context)
-        return NoteHolder(inflater.inflate(R.layout.rc_item, parent, false),context)
+        return NoteHolder(inflater.inflate(R.layout.rc_item, parent, false), context)
     }
 
     override fun getItemCount(): Int {
@@ -49,5 +50,12 @@ class NoteAdapter(listMain: ArrayList<noteItem>, contextM: Context) :
         listArray.clear()
         listArray.addAll(listItem)
         notifyDataSetChanged()
+    }
+
+    fun removeItem(pos: Int, dbManager: DbManager) {
+        dbManager.removeItemFromDb(listArray[pos].id.toString())
+        listArray.removeAt(pos)
+        notifyItemRangeChanged(0, listArray.size)
+        notifyItemRemoved(pos)
     }
 }

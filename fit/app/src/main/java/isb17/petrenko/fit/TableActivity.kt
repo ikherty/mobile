@@ -20,26 +20,24 @@ class TableActivity : AppCompatActivity() {
     }
 
     fun onClickSave(view: View) {
-        val myTitle=idTitle.text.toString()
-        val myFill=idFill.text.toString()
-        if (myTitle!=""&&myFill!="") {
+        val myTitle = idTitle.text.toString()
+        val myFill = idFill.text.toString()
+        if (myTitle != "" && myFill != "") {
             dbManager.insertToDb(myTitle, myFill)
             finish()
         }
     }
-    fun getMyIntent(){
-        val i=intent
-        if(i!=null){
-            if(i.getStringExtra(MyIntentConstant.I_TITLE_KEY)!=null){
+
+    fun getMyIntent() {
+        val i = intent
+        if (i != null) {
+            if (i.getStringExtra(MyIntentConstant.I_TITLE_KEY) != null) {
                 idTitle.setText(i.getStringExtra(MyIntentConstant.I_TITLE_KEY))
                 idFill.setText(i.getStringExtra(MyIntentConstant.I_CONTENT_KEY))
             }
         }
     }
 
-    //        var index: Int = intent.getIntExtra("pos", 0)
-//        Toast.makeText(this, "Выбрано $index", Toast.LENGTH_SHORT).show()
-//        webView.loadUrl("file:///android_asset/item_$index.html")
     override fun onDestroy() {
         super.onDestroy()
         dbManager.closeDb()
