@@ -10,3 +10,7 @@ test - баловство для проверки работоспособнос
 
 lesson7-resourses+navMenu
 lesson6-list
+
+https://www.youtube.com/watch?v=eEOSob7frz4
+
+https://www.youtube.com/watch?v=j3Wr-RTxv-I
